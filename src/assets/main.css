@@ -1,6 +1,7 @@
 @import "./styles/base.css";
 @import "./styles/reset.css";
 @import "./styles/font.css";
+@import url(./icon/iconfont.css);
 
 #app {
   font-weight: normal;

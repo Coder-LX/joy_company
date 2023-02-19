@@ -91,7 +91,6 @@
     }
 
     .footer-copyright {
-
       position: absolute;
       width: 100%;
       top: 400px;

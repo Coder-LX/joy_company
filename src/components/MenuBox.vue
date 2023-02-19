@@ -57,7 +57,7 @@
     .box-btn {
       width: 197px;
       height: 47px;
-      background-color: #123456;
+      background-color: #234567;
       display: inline-block;
       color: whitesmoke;
       display: flex;
