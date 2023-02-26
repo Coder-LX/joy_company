@@ -11,19 +11,19 @@
     "tests/**/*.tsx"
   ],
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
       ]
     },
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "allowJs": true,
-    "sourceMap": true,
-    "jsx": "preserve",
-    "moduleResolution": "node"
   },
   "references": [
     {

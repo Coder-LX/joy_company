@@ -19,13 +19,14 @@
     </Swiper>
 
     <div class="flow-box">
-      <MenuBox></MenuBox>
-      <MenuBox></MenuBox>
+      <MenuBox v-for="item of menuBoxs" :key="item.name" v-bind="item"></MenuBox>
     </div>
 
   </div>
 </template>
 <script lang="ts" setup>
+import emailUrl from '@/assets/images/email.webp';
+import moneyUrl from '@/assets/images/money.png.webp'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Navigation } from 'swiper'
 import 'swiper/scss';
@@ -33,6 +34,13 @@ import 'swiper/scss/navigation';
 import MenuBox from '@/components/MenuBox.vue'
 import { ref, reactive } from 'vue'
 let modules = [Autoplay, Navigation]
+let s = "ss"
+
+let menuBoxs = [
+  { name: '如何寻找我们？', name_en: 'Want To Contact Us?', imgUrl: emailUrl },
+  { name: '想要寻找报价？', name_en: 'Looking For Prices?', imgUrl: moneyUrl }
+];
+
 </script>
 <style lang="scss" scoped>
 .home-bar {

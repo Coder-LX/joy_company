@@ -1,11 +1,10 @@
 <template>
   <div class="menu-box">
-    <img src="../assets/images/boxbg.png.webp" alt="">
     <div class="box-content">
-      <img class="box-logo" src="../assets/images/email.webp" alt="">
+      <img class="box-logo" :src="props.imgUrl" alt="">
       <div class="box-text">
-        <h3>如何联系我们?</h3>
-        <p>Want To Contact Us?</p>
+        <h3>{{ props.name }}</h3>
+        <p>{{ props.name_en }}</p>
       </div>
       <div class="box-btn">
         <span> VIEW ></span>
@@ -14,46 +13,41 @@
   </div>
 </template>
 <script lang="ts" setup>
+const props = defineProps({
+  name: String,
+  name_en: String,
+  imgUrl: String,
+})
+
+
 </script>
 <style lang="scss" scoped>
 .menu-box {
-  width: 520px;
-  height: 320px;
+  width: 450px;
+  height: 280px;
   position: relative;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
+  margin: 0 60px;
   .box-content {
-    padding: 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    // background: rgba(1, 1, 1, 0.2);
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px 1px rgba(97, 44, 196, 0.2);
+    border-radius: 5px;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
     .box-logo {
       width: 47px;
-      height: 33px;
     }
-
     .box-text {
       h3 {
         font-size: 22px;
       }
-
       p {
         font-size: 15px;
       }
     }
-
     .box-btn {
       width: 197px;
       height: 47px;
@@ -63,6 +57,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
+      border-radius: 2px;
     }
   }
 }

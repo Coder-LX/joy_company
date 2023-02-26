@@ -2,6 +2,7 @@
   <main class="main">
     <HomeBar></HomeBar>
     <ComServices></ComServices>
+
   </main>
 </template>
 

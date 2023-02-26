@@ -42,7 +42,7 @@
 
   .footer-container {
     text-align: left;
-    width: 1440px;
+    width: 90%;
     height: 100%;
     display: inline-block;
 
