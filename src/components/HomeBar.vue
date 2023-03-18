@@ -25,8 +25,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-import emailUrl from '@/assets/images/email.webp';
-import moneyUrl from '@/assets/images/money.png.webp'
+import emailUrl from '@/assets/images/icon/email.webp';
+import moneyUrl from '@/assets/images/icon/money.png.webp'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Navigation } from 'swiper'
 import 'swiper/scss';
