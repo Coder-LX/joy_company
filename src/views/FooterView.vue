@@ -3,11 +3,11 @@
     <div class="footer-container">
       <div class="footer-menu">
         <ul>
-          <li>首页</li>
-          <li>解决方案</li>
-          <li>关于我们</li>
-          <li>加入我们</li>
-          <li>联系我们</li>
+          <li><router-link to="/">首页</router-link></li>
+          <li><router-link to="/solution">解决方案</router-link></li>
+          <li><router-link to="/about-us">关于我们</router-link></li>
+          <li><router-link to="/join-us">加入我们</router-link></li>
+          <li><router-link to="/link-us">联系我们</router-link></li>
         </ul>
       </div>
       <div class="footer-logo">

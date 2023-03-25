@@ -34,7 +34,7 @@ import 'swiper/scss/navigation';
 import MenuBox from '@/components/MenuBox.vue'
 import { ref, reactive } from 'vue'
 let modules = [Autoplay, Navigation]
-let s = "ss"
+
 
 let menuBoxs = [
   { name: '如何寻找我们？', name_en: 'Want To Contact Us?', imgUrl: emailUrl },

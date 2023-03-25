@@ -13,9 +13,9 @@ let activePage = ref('HomePage');
 let menus = reactive([
   { name: '首页', key: 'HomePage', router: '/' },
   { name: '解决方案', key: 'SolutionPage', router: '/solution' },
-  { name: '关于我们', key: 'AboutUsPage', router: '/aboutUs' },
-  { name: '加入我们', key: 'JoinUsPage', router: '/joinUs' },
-  { name: '联系我们', key: 'LinkUsPage', router: '/linkUs' }
+  { name: '关于我们', key: 'AboutUsPage', router: '/about-us' },
+  { name: '加入我们', key: 'JoinUsPage', router: '/join-us' },
+  { name: '联系我们', key: 'LinkUsPage', router: '/link-us' }
 ])
 
 let changePage = (item: any) => {

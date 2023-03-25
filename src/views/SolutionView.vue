@@ -114,7 +114,7 @@ let hoverIndex = ref(7)
   .service-more,
   .service-solutions {
     margin: 150px 7.5%;
-    height: 750px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
