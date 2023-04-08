@@ -71,10 +71,12 @@
         <p>Bespoke Solutions for your Industry</p>
       </div>
       <div class="solution-boxs">
-        <div v-for="item of plans" class="solution-box">
-          <div style="width: 100%;">
+        <div v-for="(item, index) of plans" class="solution-box">
+          <div @mouseenter="showDesc(index)" @mouseleave="hideDesc(index)" class="box-content">
             <img :src="item.imgUrl" alt="">
-            <p></p>
+            <div v-if="index == hoverIndex" class="solution-desc">
+              <p>{{ item.desc }}</p>
+            </div>
           </div>
 
           <p class="box-title">{{ item.title }}</p>
@@ -102,9 +104,17 @@ let plans = [
   { title: '家具', desc: '没有什么比看起来旧的新家具更糟糕的了。家具处理不当意味着它可能会被划伤、撕裂或肿胀。我们确保家具物品被正确包装并在合适的条件下储存或运输，以将家具以原始状态运送到目的地。我们战略性地位于家具生产中心，为亚洲和美洲的家具行业专家提供一系列物流服务。', imgUrl: planE },
   { title: '化妆品', desc: '多年来，我们一直受到业内一些知名人士的信任。 化妆品不仅需要妥善储存以保持其质量，而且还应小心处理，以便其包装始终体现出它们带来的美感。 我们提供完善且活跃的物流服务，能够满足日益增长的供应需求，让您随时准备好推出新系列。', imgUrl: planF }
 ]
-
-
 let hoverIndex = ref(7)
+
+let showDesc = (index: number) => {
+  hoverIndex.value = index;
+}
+
+let hideDesc = (index: number) => {
+  hoverIndex.value = -1;
+}
+
+
 
 
 </script>
@@ -209,12 +219,35 @@ let hoverIndex = ref(7)
       align-content: space-between;
       .solution-box {
         text-align: left;
-        position: relative;
         width: 32%;
         margin-top: 20px;
-        img {
+        .box-content {
           width: 100%;
-          border-radius: 5px;
+          position: relative;
+          img {
+            width: 100%;
+            border-radius: 5px;
+            display: block;
+          }
+          .solution-desc {
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(35, 69, 103, 0.8);
+
+            p {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 75%;
+              color: azure;
+              line-height: 30px;
+              transform: translate(-50%, -50%);
+            }
+          }
         }
         p.box-title {
           margin: 10px 0 15px 0;
